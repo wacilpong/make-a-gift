@@ -1,0 +1,22 @@
+{
+  "name": "make-a-gift",
+  "version": "1.0.0",
+  "description": "祝你生日快乐。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wacilpong/make-a-gift.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "roomy.han",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wacilpong/make-a-gift/issues"
+  },
+  "homepage": "https://github.com/wacilpong/make-a-gift#readme"
+}
