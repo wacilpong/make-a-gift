@@ -4,6 +4,9 @@
   "description": "祝你生日快乐。",
   "main": "index.js",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/wacilpong/make-a-gift/issues"
   },
-  "homepage": "https://github.com/wacilpong/make-a-gift#readme"
+  "homepage": "https://github.com/wacilpong/make-a-gift#readme",
+  "devDependencies": {
+    "vite": "^6.2.1"
+  }
 }
