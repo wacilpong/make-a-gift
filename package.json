@@ -1,13 +1,12 @@
 {
   "name": "make-a-gift",
   "version": "1.0.0",
-  "description": "祝你生日快乐。",
+  "description": "祝有人生日快乐。",
   "main": "index.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
