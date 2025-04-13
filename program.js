@@ -5,11 +5,13 @@ function download() {
 function display(form, event) {
   event.preventDefault();
 
+  const congrats = document.getElementById("congrats_box");
   const data = new FormData(form);
   const person = data.get('person');
   const gift = data.get('gift');
 
   alert(`${person}에게 ${gift}을 선물로 드릴게요.`);
+  congrats.style.display = 'block';
 }
 
 document.addEventListener("DOMContentLoaded", () => {
