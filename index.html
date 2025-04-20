@@ -9,16 +9,48 @@
   </head>
   <body>
     <h3>누군가의 생일을 축하해보아요!</h3>
+    <p>생일자 이름과 주고 싶은 선물을 작성한 후, 저장 버튼을 누르면 프로그램이 자동으로 다운로드 됩니다.</p>
     <form id="birthday_form">
         <label for="person_input">생일자 이름: </label>
         <input type="text" id="person_input" name="person" required />
         <label for="gift_input">주고 싶은 선물: </label>
         <input type="text" id="gift_input" name="gift" required />
         <div>
-          <input type="submit" value="저장" />
+          <input type="submit" value="저장하고 다운로드" />
         </div>
     </form>
-
-    <button id="download_button">생일축하 프로그램 다운로드</button>
   </body>
+
+  <script>
+    const form = document.getElementById('birthday_form');
+
+    let appUrl = null;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const person = document.getElementById('person_input').value;
+      const gift = document.getElementById('gift_input').value;
+      const response = await fetch('http://localhost:3000/build-app', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ person, gift }),
+      });
+
+      if (response.ok) {
+        const blob = await response.blob();
+        const url = window.URL.createObjectURL(blob);
+
+        appUrl = url;
+
+        if (appUrl) {
+        const a = document.createElement('a');
+
+        a.href = appUrl;
+        a.download = 'make-a-gift.zip';
+        a.click();
+      }
+      }
+    });
+  </script>
 </html>
