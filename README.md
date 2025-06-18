@@ -4,6 +4,11 @@ npm create vite@latest . -- --template vanilla
 npm install @tauri-apps/cli @tauri-apps/api --save-dev
 npx tauri init
 ```
+```
+// rust 1.67v 이상 사용하기
+rustc --version
+rustup update
+```
 
 # 2
 ```
